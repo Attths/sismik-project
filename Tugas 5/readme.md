@@ -16,6 +16,7 @@ void tekanTombol() {
   tombolDitekan = true;
 }
 
+// setup LED sebagai output
 void setup() {
   pinMode(ledMerahKendaraan, OUTPUT);
   pinMode(ledKuningKendaraan, OUTPUT);
@@ -34,7 +35,6 @@ void setup() {
 }
 
 void loop() {
-
   if (tombolDitekan) {
     tombolDitekan = false;
 
