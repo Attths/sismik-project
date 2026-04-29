@@ -26,9 +26,9 @@ const char* tentukanKategori(float suhu) {
 
 //Untuk menyalakan LED Berdasarkan aturan percabangan yang telah dibuat di atas
 void aturLED(float suhu) {
-  digitalWrite(PIN_LED_HIJAU,  suhu < BATAS_DINGIN                          ? HIGH : LOW);
-  digitalWrite(PIN_LED_KUNING, suhu >= BATAS_DINGIN && suhu <= BATAS_PANAS   ? HIGH : LOW);
-  digitalWrite(PIN_LED_MERAH,  suhu > BATAS_PANAS                            ? HIGH : LOW);
+  digitalWrite(PIN_LED_HIJAU,  suhu < BATAS_DINGIN                          ? HIGH : LOW); // parameter dingin
+  digitalWrite(PIN_LED_KUNING, suhu >= BATAS_DINGIN && suhu <= BATAS_PANAS   ? HIGH : LOW); // parameter normal atau di antara dingin dan panas
+  digitalWrite(PIN_LED_MERAH,  suhu > BATAS_PANAS                            ? HIGH : LOW); // parameter panas
 }
 
 // Fungsi untuk menampilkan informasi suhu dan status ke layar LCD fisik
@@ -53,17 +53,23 @@ void kirimSerial(float suhu, const char* kategori) {
 //Setup semua untuk digunakan 
 void setup() {
   Serial.begin(9600);
+
+  // setup LED sebagai output
   pinMode(PIN_LED_HIJAU,  OUTPUT);
   pinMode(PIN_LED_KUNING, OUTPUT);
   pinMode(PIN_LED_MERAH,  OUTPUT);
+  
   digitalWrite(PIN_LED_HIJAU,  LOW);
   digitalWrite(PIN_LED_KUNING, LOW);
   digitalWrite(PIN_LED_MERAH,  LOW);
-  lcd.init();
-  lcd.backlight();
-  lcd.setCursor(0, 0);
+  
+  lcd.init(); // inisialisasi lcd
+  lcd.backlight(); // menyalakan lampu backlight lcd
+
+  lcd.setCursor(0, 0); // memunculkan output di baris pertama
   lcd.print("Monitoring Suhu");
-  lcd.setCursor(0, 1);
+  
+  lcd.setCursor(0, 1); // memunculkan output di baris kedua
   lcd.print("Sistem Aktif...");
   delay(1500);
   lcd.clear();
