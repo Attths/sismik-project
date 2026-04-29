@@ -1,6 +1,6 @@
-# 🌡️ Sistem Monitoring Suhu Berbasis Arduino UNO
+# Sistem Monitoring Suhu Berbasis Arduino UNO
 
-### Sistem pemantauan suhu real-time menggunakan sensor TMP, LCD I2C 16×2, dan indikator LED tiga warna — dibangun di atas platform Arduino UNO.
+## Sistem pemantauan suhu real-time menggunakan sensor TMP, LCD I2C 16×2, dan indikator LED tiga warna Berbasis Arduino UNO.
 
 ---
 
@@ -8,7 +8,7 @@
 
 Proyek ini merupakan implementasi **Sistem Monitoring Suhu** berbasis Arduino UNO yang dirancang untuk mata kuliah **Sistem Mikrokontroler** di Program Studi Teknik Komputer, Fakultas Teknik, Universitas Jenderal Soedirman.
 
-Sistem ini mampu:
+Kemampuan Sitem:
 - Membaca suhu lingkungan secara real-time menggunakan sensor TMP36 (ADC)
 - Menampilkan nilai suhu dan status pada LCD 16×2 melalui protokol **I2C**
 - Memberikan indikator visual dengan **3 LED** (Hijau / Kuning / Merah)
@@ -26,7 +26,7 @@ Sistem ini mampu:
 
 ## Schematic Sistem
 
-<img width="839" height="647" alt="image" src="https://github.com/user-attachments/assets/91f2afe3-c25a-40a9-9ed9-70aefd0ab112" />
+<img width="839" height="647" alt="image" src="https://github.com/user-attachments/assets/91f2afe3-c25a-40a9-9ed9-70aefd0ab112">
 
 ---
 
@@ -43,7 +43,7 @@ Sistem ini mampu:
 | 7 | Resistor 220Ω | Pembatas arus untuk masing-masing LED |
 | 8 | Breadboard | Media penghubung antar komponen tanpa solder |
 | 9 | Kabel Jumper | Menghubungkan komponen satu dengan lainnya |
-| 10 | Kabel USB Tipe B | Menghubungkan Arduino ke PC dan sebagai sumber daya |
+| 10 | Kabel USB Tipe B | Menghubungkan Arduino ke Laptop dan sebagai sumber daya |
 
 ---
 
@@ -107,7 +107,7 @@ Sistem ini mampu:
 
 ## Simulasi Sistem
 
-<img width="591" height="426" alt="image" src="https://github.com/user-attachments/assets/25df3e4b-44a5-4639-a274-046b01c0e3a5" />
+<img width="591" height="426" alt="image" src="https://github.com/user-attachments/assets/25df3e4b-44a5-4639-a274-046b01c0e3a5">
 
 ---
 
@@ -125,7 +125,7 @@ Program Studi Teknik Komputer, Fakultas Teknik, Universitas Jenderal Soedirman
 | Hafish Athallah | H1H024052 |
 | Rasta Listiadi | H1H024053 |
 
-## **Dosen Pengampu:** Ucky Pradestha Novettralita, S.Pd., M.Kom.
+### **Dosen Pengampu:** Ucky Pradestha Novettralita, S.Pd., M.Kom.
 
 ---
 
